@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import About from "./components/About";
 import Comments from "./components/Comments";
@@ -20,15 +20,16 @@ function App() {
   //   });
 
   return (
-    <div className="wrapper">
+    <div className="App">
       <Router>
         <Nav />
+     
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-
-          <Route path="/Videos/:id" element={<Video />} />
+          <Route path="/Videos/:id" element={<Video />} />  
         </Routes>
+
         <Videos /> {/**displays all videos */}
         <Comments /> {/**comment section functionality */}
         <ModalError /> {/**error window */}
