@@ -46,19 +46,22 @@ export default function Home() {
           onChange={(e) => setSearch(e.target.value)}
         ></input>
         <button>Search</button>
-        {/* {videos.length !== 0 ? (<h1>videos</h1>) : (<div className="NoSearchYet"><p>No Search Results Yet!, Please submit a search above!</p></div>)
-        } */}
-        <ul className="videosList">
-          {videos.length !== 0
-            ? videos.map((video) => {
-                return (
-                  <li>
-                    <p>{video.snippet.title}</p>
-                    <img src={video.snippet.thumbnails.default.url} />
-                  </li>
-                );
-              })
-            : <div className="NoSearchYet"><p>No Search Results Yet!, Please submit a search above!</p></div>}
+
+        <ul className="VideosList">
+          {videos.length !== 0 ? (
+            videos.map((video) => {
+              return (
+                <li>
+                  <p>{video.snippet.title}</p>
+                  <img src={video.snippet.thumbnails.default.url} />
+                </li>
+              );
+            })
+          ) : (
+            <div className="NoSearchYet">
+              <p>No Search Results Yet!, Please submit a search above!</p>
+            </div>
+          )}
         </ul>
       </form>
     </div>
