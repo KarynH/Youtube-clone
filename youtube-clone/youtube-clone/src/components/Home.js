@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, link } from "react-router-dom";
 // import Youtube from 'react-youtube'
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
 
   return (
     <div className="Search">
-      <h6>This is the home/</h6>
+      <h6>**This is the home/**</h6>
       <form onSubmit={handleSubmit}>
         <label htmlFor="Search"></label>
         <input
@@ -52,8 +53,12 @@ export default function Home() {
             videos.map((video) => {
               return (
                 <li>
+                  <Link to="/Videos/:id">
                   <p>{video.snippet.title}</p>
-                  <img src={video.snippet.thumbnails.default.url} />
+                  
+                    {" "}
+                    <img src={video.snippet.thumbnails.default.url} />
+                  </Link>
                 </li>
               );
             })
