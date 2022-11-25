@@ -50,14 +50,14 @@ export default function Home() {
 
         <ul className="VideosList">
           {videos.length !== 0 ? (
-            videos.map((video) => {
+            videos.map((video, i) => { 
               return (
-                <li>
+                
+                <li key={i}> {/** had trouble setting video.id.videoId*/}
                   <Link to="/Videos/:id">
-                  <p>{video.snippet.title}</p>
-                  
-                    {" "}
+                    <p>{video.snippet.title}</p>{" "}
                     <img src={video.snippet.thumbnails.default.url} />
+                    {/* {console.log(video.id.videoId , 'videoIdhere')} */}
                   </Link>
                 </li>
               );
