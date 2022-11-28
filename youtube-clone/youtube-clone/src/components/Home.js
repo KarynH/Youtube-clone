@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Link, link } from "react-router-dom";
 // import Youtube from 'react-youtube'
@@ -50,14 +51,13 @@ export default function Home() {
 
         <ul className="VideosList">
           {videos.length !== 0 ? (
-            videos.map((video, i) => { 
+            videos.map((video) => {
               return (
-                
-                <li key={i}> {/** had trouble setting video.id.videoId*/}
-                  <Link to="/Videos/:id">
+                <li key={video.id.videoId}>
+                  {/* <Link to={"/videos/:id"}> */}
+                  <Link to={`/videos/${video.id.videoId}`}>
                     <p>{video.snippet.title}</p>{" "}
                     <img src={video.snippet.thumbnails.default.url} />
-                    {/* {console.log(video.id.videoId , 'videoIdhere')} */}
                   </Link>
                 </li>
               );
