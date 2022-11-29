@@ -2,11 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import About from "./components/About";
-import Comments from "./components/Comments";
 import Home from "./components/Home";
 import ModalError from "./components/ModalError";
 import Nav from "./components/Nav";
 import Video from "./components/Video";
+import Videos from "./components/Videos";
+import Search from "./components/Search";
 
 
 import "./App.css";

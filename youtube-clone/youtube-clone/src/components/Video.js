@@ -1,11 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
-import Comments from "./Comments";
-
 
 export default function Video() {
-
   let { id } = useParams();
   // const [singleVideo, setSingleVideo] = useState(
   //   window.localStorage.getItem(id) || [] );
@@ -17,14 +14,11 @@ export default function Video() {
   //   autoplay: 1,
   //   },
   // }
-  console.log(id);
 
- 
   return (
     <div className="SingleVideo">
-  
       <YouTube videoId={id} />
-      < Comments />
+
       {/* <iframe
         width="500"
         height="315"
