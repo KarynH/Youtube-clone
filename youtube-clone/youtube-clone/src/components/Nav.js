@@ -8,7 +8,7 @@ export default function Nav() {
         <h2 className="NavHeadings">Home</h2>
       </Link>
       <Link to="/about">
-      <h2 className="NavHeadings">About</h2>
+        <h2 className="NavHeadings">About</h2>
       </Link>
     </nav>
   );
