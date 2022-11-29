@@ -7,6 +7,7 @@
  
  }
 
+
  .Nav {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -17,7 +18,7 @@
  .NavHeadings {
   margin-left: 20px;
   font-weight: lighter;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
  }
 
@@ -91,3 +92,25 @@ inline-size: max-content;
   color: black;
  }
 
+ .about{
+
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+ }
+
+.ArticleTitle {
+  margin-left: 100px;
+  font-family: revert;
+  font-weight: lighter;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.about {
+  font-weight: 200;
+}
+
+article a {
+  color: rgb(20, 98, 24);
+}
