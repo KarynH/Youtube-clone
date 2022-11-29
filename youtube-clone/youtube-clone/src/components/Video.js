@@ -1,8 +1,11 @@
-import React from 'react';
+import React from "react";
 import { useParams } from "react-router-dom";
-import YouTube from 'react-youtube';
+import YouTube from "react-youtube";
+import Comments from "./Comments";
 
-export default function Video({videos}) {
+
+export default function Video() {
+
   let { id } = useParams();
   // const [singleVideo, setSingleVideo] = useState(
   //   window.localStorage.getItem(id) || [] );
@@ -15,10 +18,13 @@ export default function Video({videos}) {
   //   },
   // }
   console.log(id);
+
+ 
   return (
     <div className="SingleVideo">
-      <h4>{id} </h4>
-   <YouTube videoId={id}/>
+  
+      <YouTube videoId={id} />
+      < Comments />
       {/* <iframe
         width="500"
         height="315"
