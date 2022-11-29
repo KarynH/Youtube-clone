@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, link } from "react-router-dom";
-// import Youtube from 'react-youtube'
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -38,7 +37,6 @@ export default function Home() {
 
   return (
     <div className="Search">
-      <h6>**This is the home/**</h6>
       <form onSubmit={handleSubmit}>
         <label htmlFor="Search"></label>
         <input
@@ -54,10 +52,9 @@ export default function Home() {
             videos.map((video) => {
               return (
                 <li key={video.id.videoId}>
-                  {/* <Link to={"/videos/:id"}> */}
                   <Link to={`/videos/${video.id.videoId}`}>
+                    <img src={video.snippet.thumbnails.medium.url} />
                     <p>{video.snippet.title}</p>{" "}
-                    <img src={video.snippet.thumbnails.default.url} />
                   </Link>
                 </li>
               );
